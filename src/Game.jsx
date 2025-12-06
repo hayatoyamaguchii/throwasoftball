@@ -41,13 +41,13 @@ const Game = () => {
 
         // Create bodies
         // Ground needs to be very long
-        const ground = Bodies.rectangle(0, window.innerHeight - 20, 100000, 40, {
+        const ground = Bodies.rectangle(0, window.innerHeight - 20, 1000000, 40, {
             isStatic: true,
             render: { fillStyle: '#4CAF50' }, // Grass green
             label: 'ground',
         });
         // Set ground position to start at 0 and extend right
-        Matter.Body.setPosition(ground, { x: 50000, y: window.innerHeight - 20 });
+        Matter.Body.setPosition(ground, { x: 500000, y: window.innerHeight - 20 });
 
         const startX = 200;
         const startY = window.innerHeight - 100;
@@ -61,7 +61,7 @@ const Game = () => {
 
         // Generate Trees
         const trees = [];
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < 2000; i++) {
             const x = 500 + i * 800 + Math.random() * 200; // Every ~800px
             const trunkHeight = 60 + Math.random() * 40;
             const trunkWidth = 20;
